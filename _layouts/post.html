@@ -1,9 +1,76 @@
 ---
-layout: page
+layout: post
 title: Article
 ---
 {% include header.html %}
-<h2>{{ page.title }} AAA</h2>
+<div class="featured-background">
+    <div id="featured">
+	<div class="region-title-and-featured">
+	  <h1 class="title" id="page-title">{{ page.title }}</h1>
+  	    <div class="region region-featured">
+                <div id="block-views-author-block" class="block block-views block-odd">
+			<div class="content">
+				<div class="view view-author view-id-author view-display-id-block view-dom-id-321072b3a18c5acbf7a004a6a883dd8d">
+        
+  
+  
+      <div class="view-content">
+	<div class="view-content-limit">
+		<div class="view-content-limit-content">
+			  <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-picture">        <div class="field-content"><img typeof="foaf:Image" src="./Create a Java CLI application with Maven   Tikal_files/profile-default.jpg" width="307" height="230" alt=""></div>  </div>  
+  <div class="views-field views-field-field-first-name">        <div class="field-content">Chaim</div>  </div>  
+  <div class="views-field views-field-field-last-name">        <div class="field-content">Turkel</div>  </div>  
+  <div class="views-field views-field-field-description">        <div class="field-content">Sr. Java Developer</div>  </div>  </div>
+		</div>
+	</div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div><!-- /.content -->
+</div><!-- /.block -->
+  </div>
+	   
+		</div><!-- /#region-title-and-featured -->
+    </div><!-- /#featured -->
+   </div><!-- /.featured-background -->
+<div class="shadow-page"></div><!-- /.shadow-page -->
+<div id="page"> 
+
+    <div id="main">
+                    
+          <div class="region region-content">
+    <div id="block-system-main" class="block block-system block-even">
+      
+  <div class="content">
+    
+<article id="node-12269" class="node node-article node-odd published with-comments node-full" about="/java/create-java-cli-application-maven" typeof="sioc:Item foaf:Document">
+   <header>
+		<div class="by-and-tags">
+						<div class="by"><div class="label-by">by</div>
+				<div class="name">
+					<a href="http://tikalk.com/java/chaimturkel">
+chaim.turkel</a>
+				</div>
+			</div>
+					
+				<div class="tags">
+					<div class="label-tags">tags:</div>
+					<div class="float-tags">
+													<div class="field field-name-field-domain field-type-taxonomy-term-reference field-label-hidden clearfix"><ul class="links"><li class="taxonomy-term-reference-0"><a href="http://tikalk.com/java" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">JAVA</a></li></ul></div>																			<div class="field field-name-field-tags field-type-taxonomy-term-reference field-label-hidden clearfix"><ul class="links">
+{% for category in page.categories %} 
+<li class="taxonomy-term-reference-0" rel="dc:subject"><a href="http://tikalk.com/tags/{{ category }}" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">{{ category }}</a></li>
+{% endfor %}
+</ul></div>											</div>
+				</div>
+					</div><!--end "by-and-tags"-->
+        
+<h2>{{ page.title }}</h2>
 <p class="meta">{{ page.date | date_to_string }}</p>
 
 <div class="post">
