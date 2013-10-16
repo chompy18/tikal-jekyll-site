@@ -98,14 +98,15 @@ module Jekyll
 
       if page
         authors = page['author']
-        authors = [authors] if authors.is_a?(String)
+	if authors
+         authors = [authors] if authors.is_a?(String)
 
-        "".tap do |output|
-          authors.each do |author|
-            data     = YAML.load(File.read(File.join(site['source'], '_team', "#{author.downcase.gsub(' ', '-')}.yml")))
-            template = File.read(File.join(site['source'], '_includes', 'author.html'))
-
-            output << Liquid::Template.parse(template).render('author' => data)
+         "".tap do |output|
+           authors.each do |author|
+             data     = YAML.load(File.read(File.join(site['source'], '_team', "#{author.downcase.gsub(' ', '-')}.yml")))
+             template = File.read(File.join(site['source'], '_includes', 'author.html'))
+             output << Liquid::Template.parse(template).render('author' => data)
+           end
           end
         end
       end
