@@ -6,7 +6,7 @@ cats:
    displayName: ALM
    styleClass: "first leaf menu-mlid-685 alm"
    highlightMembers: lia-katz,itai-or
-   imageurl: alm.jpg	
+   imageurl: alm.jpg        
  - name: java
    displayName: Java
    styleClass: "leaf menu-mlid-686 java"
@@ -27,4 +27,3 @@ cats:
    styleClass: "last leaf menu-mlid-689 ror"
    highlightMembers: avi-tzurel
    imageurl: ror.jpg
-
