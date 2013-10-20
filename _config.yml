@@ -1,3 +1,30 @@
 name: Tikal
 markdown: redcarpet
 pygments: true
+cats:
+ - name: alm
+   displayName: ALM
+   styleClass: "first leaf menu-mlid-685 alm"
+   highlightMembers: lia-katz,itai-or
+   imageurl: alm.jpg	
+ - name: java
+   displayName: Java
+   styleClass: "leaf menu-mlid-686 java"
+   highlightMembers: andrew-skiba,adi-baron,yanay-franchi
+   imageurl: java.jpg
+ - name: js
+   displayName: JS
+   styleClass: "leaf menu-mlid-687 js"
+   highlightMembers: oren-farhi,assaf-gannon
+   imageurl: js.jpg
+ - name: net
+   displayName: .NET
+   styleClass: "leaf menu-mlid-688 .net"
+   highlightMembers: menny-rachmanny,igor-zalmanovich
+   imageurl: net.jpg
+ - name: ror
+   displayName: RoR
+   styleClass: "last leaf menu-mlid-689 ror"
+   highlightMembers: avi-tzurel
+   imageurl: ror.jpg
+

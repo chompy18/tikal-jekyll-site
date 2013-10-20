@@ -46,6 +46,7 @@ title: Article
 {% for category in page.categories %} 
 <li class="taxonomy-term-reference-0" rel="dc:subject"><a href="http://tikalk.com/tags/{{ category }}" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">{{ category }}</a></li>
 {% endfor %}
+
 </ul></div>											</div>
 				</div>
 					</div><!--end "by-and-tags"-->
@@ -56,4 +57,5 @@ title: Article
 <div class="post">
 {{ content }}
 </div>
+{% include categoryBox.html %}
 {% include footer.html %}
