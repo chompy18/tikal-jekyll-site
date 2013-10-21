@@ -1,0 +1,51 @@
+		<div class="content">
+			<div class="view view-our-team view-id-our_team view-display-id-meet_our_experts view-dom-id-b34c46093c33ab863e8a20bb0d9e7220">
+				<div class="view-content">
+					<div class="view-content-limit">
+						<div class="view-content-limit-content">
+							{% for expert in expertsData %}
+							
+							{% if forloop.first %}
+								{% assign extra = "views-row-first" %}
+							{% elsif forloop.last %}
+								{% assign extra = "views-row-last" %}
+							{% else %}
+								{% assign extra = "" %}
+							{% endif %}
+							
+							<div class="views-row views-row-{{ forloop.index }} views-row-{% cycle 'odd', 'even' %} {{ extra }}">
+								<a href="{{ expert.website }}">
+									<div class="front">
+										<div class="views-field views-field-picture">	 	 	 	 
+											<div class="field-content">
+												<img typeof="foaf:Image" src="/images/team/{{ expert.image.url }}" alt="" />
+											</div>	 	 	
+										</div>	 		 	 
+										<div class="views-field views-field-field-first-name">	 	 	
+											<div class="field-content">{{ expert.name }}</div>	 
+										</div>	 		 	 
+										<!--<div class="views-field views-field-field-last-name">	 	 
+											<div class="field-content">{{ expert.last }}</div>	 
+										</div>-->
+										<div class="views-field views-field-field-description">	 	 	 	    
+											<div class="field-content">{{ expert.role }}</div>	 	 	  
+										</div>	 		 	 	 	 	 		 	 	 	 	 	
+									</div>
+									<div class="back">
+										<div class="views-field views-field-nothing">	 	 	 	    
+											<span class="field-content">
+												<div class="about">{{ expert.bio }}</div>
+												<div class="name">{{ expert.name }}</div>
+												<div class="description">{{ expert.role }}</div>
+											</span>	 	 	
+										</div>	
+									</div>
+								</a>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+<!-- /.content -->	

@@ -1,0 +1,16 @@
+active: true
+bio:
+  Over 20 years of experience in the high tech industry as software development entrepreneur, supporter of emerging open source technologies and programing languages.
+email: sample@person.com
+github: sampleperson
+image:
+  url: lior-kanfi.jpg
+  title: Lior Kanfi
+  alt: Lior Kanfi
+  attribution:
+layout: profile
+linkedin: lai
+name: Lior Kanfi
+role: Founder and CEO
+type: employee
+website: http://tikalk.com/java/liorkanfi

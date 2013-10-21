@@ -1,0 +1,16 @@
+active: true
+bio:
+  Working on a full blown website with Ruby on rails as a framework, managing servers and databases, deploying to a number of servers etc.
+email: sample@person.com
+github: sampleperson
+image:
+  url: avi-tzurel.jpg
+  title: Avi Tzurel
+  alt: Avi Tzurel
+  attribution:
+layout: profile
+linkedin: lai
+name: Avi Tzurel
+role: RoR Architect
+type: employee
+website: http://tikalk.com/ror/avit
