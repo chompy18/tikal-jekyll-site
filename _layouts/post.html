@@ -1,59 +1,167 @@
 ---
 layout: post
-title: Article
 ---
-{% include header.html %}
-<div class="featured-background">
+{% include header.html %}  
+   <div class="featured-background">
     <div id="featured">
-	<div class="region-title-and-featured">
-	  <h1 class="title" id="page-title">{{ page.title }}</h1>
-  	    <div class="region region-featured">
-                <div id="block-views-author-block" class="block block-views block-odd">
-			<div class="content">
-				{% authors %}
-  
-</div>  </div><!-- /.content -->
-</div><!-- /.block -->
-  </div>
-	   
-		</div><!-- /#region-title-and-featured -->
+      <div class="region-title-and-featured">
+        <h1 class="title" id="page-title">{{ page.title }}</h1>
+        <div class="region region-featured">
+          <div id="block-views-author-block" class="block block-views block-odd">
+            <div class="content">
+              {% authors %}
+            </div><!-- /.content -->
+          </div><!-- /.block -->
+        </div>
+      </div><!-- /#region-title-and-featured -->
     </div><!-- /#featured -->
-   </div><!-- /.featured-background -->
-<div class="shadow-page"></div><!-- /.shadow-page -->
-<div id="page"> 
+  </div><!-- /.featured-background -->
 
+  <div class="shadow-page"></div><!-- /.shadow-page -->
+
+  <div id="page">
     <div id="main">
-                    
-          <div class="region region-content">
-    <div id="block-system-main" class="block block-system block-even">
-      
-  <div class="content">
-    
-<article id="node-12269" class="node node-article node-odd published with-comments node-full" about="/java/create-java-cli-application-maven" typeof="sioc:Item foaf:Document">
-   <header>
-		<div class="by-and-tags">
-						<div class="by"><div class="label-by">by</div>
-				<div class="name">
-					<a href="http://tikalk.com/java/chaimturkel">
-{{ page.author }}</a>
-				</div>
-			</div>
-					
-				<div class="tags">
-					<div class="label-tags">tags:</div>
-					<div class="float-tags">
-													<div class="field field-name-field-domain field-type-taxonomy-term-reference field-label-hidden clearfix"><ul class="links"><li class="taxonomy-term-reference-0"><a href="http://tikalk.com/java" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">JAVA</a></li></ul></div>																			<div class="field field-name-field-tags field-type-taxonomy-term-reference field-label-hidden clearfix"><ul class="links">
-{% for category in page.categories %} 
-<li class="taxonomy-term-reference-0" rel="dc:subject"><a href="http://tikalk.com/tags/{{ category }}" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">{{ category }}</a></li>
-{% endfor %}
-</ul></div>											</div>
-				</div>
-					</div><!--end "by-and-tags"-->
-        
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+      <div class="region region-content">
+        <div id="block-system-main" class="block block-system block-even">
+          <div class="content">
+            
 
-<div class="post">
-{{ content }}
-</div>
+  
+
+            <div class="content">
+              {{ content }}
+              <!--<div class=
+              "field field-name-body field-type-text-with-summary field-label-hidden">
+                <div class="field-items">
+                  <div class="field-item field-item-1 even" property="content:encoded">
+                    <div class="MsoNormal">
+			            {{ content }}
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+            </div><!-- /.content -->
+            <!-- /.node -->
+          </div><!-- /.content -->
+        </div><!-- /.block -->
+
+        <div id="block-facebook-comments-box-facebook-comments-box" class=
+        "block block-facebook-comments-box block-odd">
+          <div class="content">
+            <div class="facebook-comments-box">
+              <div id="fb-root"></div><script src=
+              "http://connect.facebook.net/en_US/all.js#xfbml=1" type="text/javascript"></script>
+            </div>
+          </div><!-- /.content -->
+        </div><!-- /.block -->
+      </div>
+    </div><!-- /#main -->
+
+    <div class="region region-sidebar-second">
+      <h2 class="block-title">Join the discussion</h2>
+
+      <div class="content">
+        <div id="fb-root">
+          &#194;&nbsp;
+        </div><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=224721710917916";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        //--><!]]>
+        </script>
+
+        <div class="fb-like-box" data-border-color="#fff" data-header="false" data-href=
+        "http://www.facebook.com/TikalKnowledge" data-show-faces="true" data-stream=
+        "false" data-width="292">
+          &#194;&nbsp;
+        </div><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+        (function(d){
+        var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+        js = d.createElement('script'); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/es_LA/all.js";
+        d.getElementsByTagName('head')[0].appendChild(js);
+        }(document));
+
+        //--><!]]>
+        </script>
+      </div><!-- /.content -->
+      <!-- /.block -->
+
+      <!--<h2 class="block-title">Events</h2>
+
+      <div class="content">
+        <div class="meetup-logo"></div>
+      </div>
+
+      <div class="field-item field-item-1">
+        <div class="event-content event-city">
+          Tel Aviv-Yafo
+        </div><a class="field-title" href=
+        "http://meetup.tikalk.com/events/139871112">Javascript.everywhere</a>
+
+        <div class="field-date">
+          <div class="date">
+            5:00 pm Tuesday, 29 Oct 2013 @
+          </div>
+
+          <div class="name">
+            Klarna Office
+          </div>
+        </div>
+      </div>
+
+      <div class="field-item field-item-2">
+        <div class="event-content event-city">
+          Tel Aviv-Yafo
+        </div><a class="field-title" href=
+        "http://meetup.tikalk.com/events/143689932">Chef Introduction &amp; Demo
+        Workshop</a>
+
+        <div class="field-date">
+          <div class="date">
+            3:00 pm Monday, 4 Nov 2013 @
+          </div>
+
+          <div class="name">
+            "Tikal" office
+          </div>
+        </div>
+      </div>
+
+      <div class="field-item field-item-3">
+        <div class="event-content event-city">
+          Tel Aviv-Yafo
+        </div><a class="field-title" href=
+        "http://meetup.tikalk.com/events/qbplxgyrpbwb">Building Web Applications with
+        Angular.js (Session 1/2)</a>
+
+        <div class="field-date">
+          <div class="date">
+            4:00 pm Sunday, 17 Nov 2013 @
+          </div>
+
+          <div class="name">
+            "Tikal" office
+          </div>
+        </div>
+      </div>-->
+    </div>
+    <!-- /.content -->
+    <!-- /.block -->
+
+    <h2 class="block-title"></h2>
+
+    <div class="content">
+      <a class="multithreading-queries-hibernate-spring" href="/careers"></a>
+    </div><!-- /.content -->
+    <!-- /.block -->
+  </div><!-- /#sidebar-second -->
+  <!-- /#page -->
 {% include footer.html %}
