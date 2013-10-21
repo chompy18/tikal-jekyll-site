@@ -4,7 +4,7 @@ bio:
 email: sample@person.com
 github: sampleperson
 image:
-  url: ../images/lia-katz.jpg
+  url: /lia-katz.jpg
   title: Lia Katz
   alt: Lia Katz
   attribution:
