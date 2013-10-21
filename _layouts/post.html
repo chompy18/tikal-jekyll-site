@@ -22,7 +22,7 @@ layout: post
       <div class="region region-content">
         <div id="block-system-main" class="block block-system block-even">
           <div class="content">
-            <article id="node-12269" class="node node-article node-odd published with-comments node-full" about="/java/create-java-cli-application-maven" typeof="sioc:Item foaf:Document">
+            <article id="node-12269" class="node node-article node-odd published with-comments node-full" about="{{ page.title }}" typeof="sioc:Item foaf:Document">
               <header>
                   <div class="by-and-tags">
                      <div class="by">
@@ -36,13 +36,13 @@ layout: post
                         <div class="float-tags">
                            <div class="field field-name-field-domain field-type-taxonomy-term-reference field-label-hidden clearfix">
                               <ul class="links">
-                                 <li class="taxonomy-term-reference-0"><a href="/java" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">{{ page.categories }}</a></li>
+                                 <li class="taxonomy-term-reference-0"><a href="/java" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">{{ page.category }}</a></li>
                               </ul>
                            </div>
                            <div class="field field-name-field-tags field-type-taxonomy-term-reference field-label-hidden clearfix">
                               <ul class="links">
                                  {% for tag in page.tags %}
-                                 <li class="taxonomy-term-reference-0" rel="dc:subject"><a href="/tags/{{ tag }}" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">{{ tag }}</a></li>
+                                    <li class="taxonomy-term-reference-0" rel="dc:subject"><a href="/tags/{{ tag }}" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">{{ tag }}</a></li>
                                  {% endfor %}
                               </ul>
                            </div>
@@ -62,16 +62,27 @@ layout: post
                   </div>
                   <div class="sharethis-buttons">
                      <div class="sharethis-wrapper">
-                        <span st_url="http://tikalk.com/java/create-java-cli-application-maven" st_title="Create a Java CLI application with Maven" class="st_linkedin_hcount" displaytext="linkedin"></span>
-                        <span st_url="http://tikalk.com/java/create-java-cli-application-maven" st_title="Create a Java CLI application with Maven" class="st_twitter_hcount" displaytext="twitter"></span>
-                        <span st_url="http://tikalk.com/java/create-java-cli-application-maven" st_title="Create a Java CLI application with Maven" class="st_googleplus_hcount" displaytext="googleplus"></span>
-                        <span st_url="http://tikalk.com/java/create-java-cli-application-maven" st_title="Create a Java CLI application with Maven" class="st_fblike_hcount" displaytext="fblike"></span>
+                        <span st_url="http://tikalk.com/{{ page.url }}" st_title="{{ page.title }}" class="st_linkedin_hcount" displaytext="linkedin"></span>
+                        
+                        <span st_url="http://tikalk.com/{{ page.url }}" st_title="{{ page.title }}" class="st_twitter_hcount" displaytext="twitter"></span>
+                        
+                        <span st_url="http://tikalk.com/{{ page.url }}" st_title="{{ page.title }}" displaytext="fblike"></span>
+
+                        <!--<span st_url="http://tikalk.com/{{ page.url }}" st_title="{{ page.title }}" class="st_googleplus_hcount"displaytext="googleplus"></span>-->
+                  
+
                         <script type='text/javascript'>var switchTo5x = true;</script><script type='text/javascript' src='http://w.sharethis.com/button/buttons.js'></script><script type='text/javascript'>stLight.options({"publisher":"dr-43c3dc3e-136a-41bc-757c-8e096a2488a7"});</script>
                      </div>
                   </div>
                </header>
               <div class="content">
-                {{ content }}
+                <div class="field-items">
+                  <div class="field-item">
+                    <div class="MsoNormal">
+                      {{ content }}
+                    </div>
+                  </div>
+                </div>
               </div><!-- /.content -->
             <!-- /.node -->
             </article>
@@ -88,6 +99,13 @@ layout: post
           </div><!-- /.content -->
         </div><!-- /.block -->
       </div>
+
+      <div>
+          <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+         <fb:comments href="http://www/tikalk.com/{{ page.url }}" num_posts="10" width="600" colorscheme="light" fb-xfbml-state="rendered" class="fb_iframe_widget"></fb:comments>
+      </div>
+      
+
     </div><!-- /#main -->
   </div><!-- /#page -->
 {% include footer.html %}
