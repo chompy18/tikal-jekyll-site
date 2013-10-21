@@ -1,1 +1,221 @@
-<footer>
+<footer id="footer" role="contentinfo">
+   <div class="region region-footer">
+      <section id="block-block-2" class="block block-block block-about-tikal block-odd">
+         <h2 class="block-title">About Tikal</h2>
+         <div class="content">
+            <div>
+               <div>
+                  For over 12 years, we have helped breakthrough companies achieve excellence and meet their goals. 
+               </div>
+               <div>
+                  By doing so we've earned recognition for delivering extremely competitive and high-performance software services to clients worldwide.
+               </div>
+            </div>
+            <div class="contact-title">
+               Contact Inforamtion
+            </div>
+            <div class="contact-number">
+               (972) 3 6488618
+            </div>
+            <div class="contact-mail">
+               <a href="">info@tikalk.com</a>
+            </div>
+         </div>
+         <!-- /.content -->
+      </section>
+      <!-- /.block -->
+      <section id="block-webform-client-block-22" class="block block-webform join-the-team block-even">
+         <h2 class="block-title">Join the Team</h2>
+         <div class="content">
+            <form class="webform-client-form" enctype="multipart/form-data" action="/java/create-java-cli-application-maven" method="post" id="webform-client-form-22" accept-charset="UTF-8">
+               <div>
+                  <div class="form-item webform-component webform-component-markup" id="webform-component-sub-header">
+                     <p>Let us contact you with more information</p>
+                  </div>
+                  <div class="form-item webform-component webform-component-textfield" id="webform-component-full-name">
+                     <input placeholder="Full Name" type="text" id="edit-submitted-full-name" name="submitted[full_name]" value="" size="60" maxlength="30" class="form-text required" />
+                  </div>
+                  <div class="form-item webform-component webform-component-email" id="webform-component-email-address">
+                     <input class="email form-text form-email required" placeholder="Email Address" type="email" id="edit-submitted-email-address" name="submitted[email_address]" size="60" />
+                  </div>
+                  <div class="form-item webform-component webform-component-phone" id="webform-component-phone-number">
+                     <input placeholder="Phone Number (optional)" type="text" id="edit-submitted-phone-number" name="submitted[phone_number]" value="" size="60" maxlength="15" class="form-text" />
+                  </div>
+                  <div class="form-item webform-component webform-component-textfield" id="webform-component-youre-a-ninja">
+                     <input placeholder="You&#039;re a Ninja in... (ex: java, ruby)" type="text" id="edit-submitted-youre-a-ninja" name="submitted[youre_a_ninja]" value="" size="60" maxlength="35" class="form-text" />
+                  </div>
+                  <div id="edit-submitted-click-to-add-your-cv-ajax-wrapper">
+                     <div class="form-item webform-component webform-component-managed_file" id="webform-component-click-to-add-your-cv">
+                        <label for="edit-submitted-click-to-add-your-cv">Click to add your CV </label>
+                        <div id="edit-submitted-click-to-add-your-cv" class="form-managed-file"><input type="file" id="edit-submitted-click-to-add-your-cv-upload" name="files[submitted_click_to_add_your_cv]" size="22" class="form-file" /><input type="submit" id="edit-submitted-click-to-add-your-cv-upload-button" name="submitted_click_to_add_your_cv_upload_button" value="Upload" class="form-submit" /><input type="hidden" name="submitted[click_to_add_your_cv][fid]" value="0" /></div>
+                     </div>
+                  </div>
+                  <input type="hidden" name="details[sid]" value="" />
+                  <input type="hidden" name="details[page_num]" value="1" />
+                  <input type="hidden" name="details[page_count]" value="1" />
+                  <input type="hidden" name="details[finished]" value="0" />
+                  <input type="hidden" name="form_build_id" value="form-eWNkqMIcJiBsvxlWeSy1j3_NKOfTCDoDgi6SGojGU84" />
+                  <input type="hidden" name="form_id" value="webform_client_form_22" />
+                  <div class="form-actions form-wrapper" id="edit-actions--2"><input type="submit" id="edit-submit--2" name="op" value="Send" class="form-submit" /></div>
+               </div>
+            </form>
+         </div>
+         <!-- /.content -->
+      </section>
+      <!-- /.block -->
+      <section id="block-general-tikal-map-home-page" class="block block-general-tikal block-odd">
+         <h2 class="block-title">Find us at:</h2>
+         <div class="content">
+            <div id="map_canvas_footer" style="width:240px; height: 200px"></div>
+            <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+            <script type="text/javascript">
+               var latlng = new google.maps.LatLng(32.1065469,34.83523969999999);
+               var settings = {
+                		zoom: 15,
+               	center: latlng,
+               	mapTypeControl: false,
+               	mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+               	navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+               	mapTypeId: google.maps.MapTypeId.ROADMAP};
+               var map = new google.maps.Map(document.getElementById("map_canvas_footer"), settings);			
+               var companyImage = new google.maps.MarkerImage("sites/all/themes/sasson/tikal/images/logo-map.png",
+               	new google.maps.Size(100,50),
+               	new google.maps.Point(0,0),
+               	new google.maps.Point(50,50)
+               );
+               var companyShadow = new google.maps.MarkerImage("images/logo_shadow.png",
+               	new google.maps.Size(130,50),
+               	new google.maps.Point(0,0),
+               	new google.maps.Point(65, 50));
+               var companyPos = new google.maps.LatLng(32.1065469,34.83523969999999);
+               var companyMarker = new google.maps.Marker({
+               	position: companyPos,
+               	map: map,
+               	icon: companyImage,
+               	shadow: companyShadow,
+               	title:"",
+               	zIndex: 3});
+            </script>  
+         </div>
+         <!-- /.content -->
+      </section>
+      <!-- /.block -->
+      <div id="block-block-3" class="block block-block find-us-at block-even">
+         <div class="content">
+            <div class="address">
+               Habarzel 4 st, 1st Floor&nbsp;<br />
+               Tel Aviv 69710<br />
+               Israel
+            </div>
+         </div>
+         <!-- /.content -->
+      </div>
+      <!-- /.block -->
+   </div>
+</footer>
+<!-- /#footer -->
+<footer id="footer-second" role="contentinfo">
+   <div class="region region-footer-second">
+      <section id="block-views-popular-articles-block" class="block block-views block-odd">
+         <h2 class="block-title">Popular Articles</h2>
+         <div class="content">
+            <?/**
+               * @file
+               * Main view template.
+               *
+               * Variables available:
+               * - $classes_array: An array of classes determined in
+               *   template_preprocess_views_view(). Default classes are:
+               *     .view
+               *     .view-[css_name]
+               *     .view-id-[view_name]
+               *     .view-display-id-[display_name]
+               *     .view-dom-id-[dom_id]
+               * - $classes: A string version of $classes_array for use in the class attribute
+               * - $css_name: A css-safe version of the view name.
+               * - $css_class: The user-specified classes names, if any
+               * - $header: The view header
+               * - $footer: The view footer
+               * - $rows: The results of the view query, if any
+               * - $empty: The empty text to display if the view is empty
+               * - $pager: The pager next/prev links to display, if any
+               * - $exposed: Exposed widget form/info to display
+               * - $feed_icon: Feed icon to display, if any
+               * - $more: A link to view more, if any
+               *
+               * @ingroup views_templates
+               */
+               ?>
+            <div class="view view-popular-articles view-id-popular_articles view-display-id-block view-dom-id-ff87bb22ea60543f62b01f8f338409c5">
+               <div class="view-content">
+                  <div class="view-content-limit">
+                     <div class="view-content-limit-content">
+                        <div class="views-row views-row-1 views-row-odd views-row-first">
+                           <div class="views-field views-field-title">        <span class="field-content"><a href="/java/location-auto-complete-and-lookup">Location Auto complete and lookup</a></span>  </div>
+                        </div>
+                        <div class="views-row views-row-2 views-row-even">
+                           <div class="views-field views-field-title">        <span class="field-content"><a href="/js/present-and-future-typescript">Present and future of TypeScript</a></span>  </div>
+                        </div>
+                        <div class="views-row views-row-3 views-row-odd views-row-last">
+                           <div class="views-field views-field-title">        <span class="field-content"><a href="/ror/building-gogobot-social-graph">building the gogobot social graph</a></span>  </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- /.content -->
+      </section>
+      <!-- /.block -->
+      <section id="block-menu-menu-fields" class="block block-menu block-even">
+         <h2 class="block-title">Domains</h2>
+         <div class="content">
+            <ul class="menu clearfix">
+               <li class="first leaf application lifecycle management"><a href="/alm" title="">Application Lifecycle Management</a></li>
+               <li class="leaf java"><a href="/java" title="">Java</a></li>
+               <li class="leaf javascript"><a href="/js" title="">JavaScript</a></li>
+               <li class="leaf .net"><a href="/net" title="">.NET</a></li>
+               <li class="last leaf ruby on rails"><a href="/ror" title="">Ruby on Rails</a></li>
+            </ul>
+         </div>
+         <!-- /.content -->
+      </section>
+      <!-- /.block -->
+      <section id="block-menu-menu-site-map" class="block block-menu block-odd">
+         <h2 class="block-title">Site Map</h2>
+         <div class="content">
+            <ul class="menu clearfix">
+               <li class="first leaf about us"><a href="/about" title="">About Us</a></li>
+               <li class="leaf solutions"><a href="/solutions" title="">Solutions</a></li>
+               <li class="leaf careers"><a href="/careers" title="">Careers</a></li>
+               <li class="last leaf contact"><a href="/contact" title="">Contact</a></li>
+            </ul>
+         </div>
+         <!-- /.content -->
+      </section>
+      <!-- /.block -->
+      <div id="block-block-1" class="block block-block all-rights-reserved block-even">
+         <div class="content">
+            <p>© 2013 All Rights Reserved. Tikal</p>
+         </div>
+         <!-- /.content -->
+      </div>
+      <!-- /.block -->
+      <div id="block-menu-menu-external-links" class="block block-menu block-odd">
+         <div class="content">
+            <ul class="menu clearfix">
+               <li class="first leaf facebook"><a href="http://www.facebook.com/TikalKnowledge" title="">Facebook</a></li>
+               <li class="leaf twitter"><a href="https://twitter.com/TikalK" title="">Twitter</a></li>
+               <li class="leaf in"><a href="http://www.linkedin.com/company/tikal-knowledge" title="">in</a></li>
+               <li class="last leaf rss"><a href="/rss-latest-articles" title="Latest Articles">RSS</a></li>
+            </ul>
+         </div>
+         <!-- /.content -->
+      </div>
+      <!-- /.block -->
+   </div>
+</footer>
+<!-- /#footer_second -->
+</body>
+</html>
+<!-- Page cached by Boost @ 2013-10-20 14:40:26, expires @ 2013-10-20 15:40:26, lifetime 1 hour -->
