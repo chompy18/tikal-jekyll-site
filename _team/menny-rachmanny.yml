@@ -1,0 +1,16 @@
+active: true
+bio:
+  Over 10 years of experience in the software industry, design, development and deployment of configuration management and development based on open source tools.
+email: sample@person.com
+github: sampleperson
+image:
+  url: menny-rachmanny.jpg
+  title: Menny Rachmanny
+  alt: Menny Rachmanny
+  attribution:
+layout: profile
+linkedin: lai
+name: Menny Rachmanny
+role: .NET Architect
+type: employee
+website: http://tikalk.com/net/menny

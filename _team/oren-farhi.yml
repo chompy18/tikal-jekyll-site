@@ -1,0 +1,16 @@
+active: true
+bio:
+  Over 10 years of experience in the software industry, design, development and deployment of configuration management and development based on open source tools.
+email: sample@person.com
+github: sampleperson
+image:
+  url: oren-farhi.jpg
+  title: Oren Farhi
+  alt: Oren Farhi
+  attribution:
+layout: profile
+linkedin: lai
+name: Oren Farhi
+role: JS Engineer
+type: employee
+website: http://tikalk.com/js/orenf

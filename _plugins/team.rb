@@ -98,7 +98,7 @@ module Jekyll
 
       if page
         authors = page['author']
-	if authors
+	    if authors
          authors = [authors] if authors.is_a?(String)
 
          "".tap do |output|
@@ -112,6 +112,38 @@ module Jekyll
       end
     end
   end
+
+  class ExpertsTag < Liquid::Tag
+
+    def initialize(tag_name, text, tokens)
+      super
+      @text   = text
+      @tokens = tokens
+    end
+
+    def render(context)
+      site = context.environments.first["site"]
+      page = context.environments.first["page"]   
+
+      if page
+        experts = page['showExperts']
+        if experts
+          experts = [experts] if experts.is_a?(String)
+          expertsData = []
+
+           "".tap do |output|
+             experts.each do |expert|
+               data     = YAML.load(File.read(File.join(site['source'], '_team', "#{expert}.yml")))
+               expertsData.push(data);
+              end
+           template = File.read(File.join(site['source'], '_includes', 'experts.html'))
+           output << Liquid::Template.parse(template).render('expertsData' => expertsData)
+            end        
+        end
+      end
+    end
+  end
 end
 
 Liquid::Template.register_tag('authors', Jekyll::AuthorsTag)
+Liquid::Template.register_tag('experts', Jekyll::ExpertsTag)

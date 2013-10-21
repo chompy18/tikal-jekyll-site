@@ -1,0 +1,16 @@
+active: true
+bio:
+  Over 18 years of experience. Specializes in Enterprise Application Design, Analysis and Development, Cloud Computing, Horizontal Scale, and Big Data.
+email: sample@person.com
+github: sampleperson
+image:
+  url: adi-baron.jpg
+  title: Adi Baron
+  alt: Adi Baron
+  attribution:
+layout: profile
+linkedin: lai
+name: Adi Baron
+role: Java and JS Architect
+type: employee
+website: http://tikalk.com/java/adi

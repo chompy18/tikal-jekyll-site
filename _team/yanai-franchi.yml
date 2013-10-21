@@ -1,0 +1,17 @@
+active: true
+bio:
+  Over 12 years of experience in the software industry, has a vast experience in the Java Server architecture, in technologies such as Hibernate , Spring , EJB3 and much more.
+email: sample@person.com
+github: sampleperson
+image:
+  url: yanai-franchi.jpg
+  title: Yanai Franchi
+  alt: Yanai Franchi
+  attribution:
+layout: profile
+linkedin: lai
+name: Yanai Franchi
+role: Java Architect
+twitter: sampleperson
+type: employee
+website: http://tikalk.com/java/yanai
