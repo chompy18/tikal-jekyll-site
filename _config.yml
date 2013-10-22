@@ -1,6 +1,7 @@
 name: Tikal
 markdown: redcarpet
 pygments: true
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
 cats:
  - name: alm
    displayName: ALM
