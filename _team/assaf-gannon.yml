@@ -1,0 +1,17 @@
+active: true
+highlighted: false
+bio:
+  Over 10 years working on start-ups in the gaming industry and SaaS projects, senior level engineer with vast experience in end-to-end system development. Hands...
+email: sample@person.com
+github: sampleperson
+image:
+  url: assaf-gannon.jpg
+  title: Assaf Gannon
+  alt: Assaf Gannon
+  attribution:
+layout: profile
+linkedin: lai
+name: Assaf Gannon
+role: Java and JS Architect
+type: employee
+website: http://tikalk.com/js/assafg

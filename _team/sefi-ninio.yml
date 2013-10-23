@@ -1,0 +1,17 @@
+active: true
+highlighted: true
+bio:
+  Over 15 years of experience in the software industry, design and development of client using Flex/AS3, GWT and JS/JQuery/Angular.
+email: sample@person.com
+github: sampleperson
+image:
+  url: sefi-ninio.jpg
+  title: Sefi Ninio
+  alt: Sefi Ninio
+  attribution:
+layout: profile
+linkedin: lai
+name: Sefi Ninio
+role: UI Architect
+type: employee
+website: http://tikalk.com/js/sefi

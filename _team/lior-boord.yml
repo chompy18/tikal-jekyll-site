@@ -1,0 +1,17 @@
+active: true
+highlighted: false
+bio:
+  Over 15 years of experience in the software industry.
+email: sample@person.com
+github: sampleperson
+image:
+  url: lior-boord.jpg
+  title: Lior Boord
+  alt: Lior Boord
+  attribution:
+layout: profile
+linkedin: lai
+name: Lior Boord
+role: Python and Flex Developer
+type: employee
+website: http://tikalk.com/incubator/liorb

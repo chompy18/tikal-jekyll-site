@@ -126,20 +126,30 @@ module Jekyll
       page = context.environments.first["page"]   
 
       if page
-        experts = page['showExperts']
-        if experts
-          experts = [experts] if experts.is_a?(String)
+        #experts = page['showExperts']
+        expertsLimit = page['expertLimit']
+        #if experts
+          #experts = [experts] if experts.is_a?(String)
           expertsData = []
 
            "".tap do |output|
-             experts.each do |expert|
-               data     = YAML.load(File.read(File.join(site['source'], '_team', "#{expert}.yml")))
-               expertsData.push(data);
+             Dir.foreach("_team") do |fname|
+                if fname != "." && fname != ".."
+                  data = YAML.load(File.read(File.join(site['source'], '_team', fname)))
+                  
+                  if data["highlighted"] == true
+                    expertsData.push(data);
+
+                    if expertsData.length == expertsLimit.to_i
+                      break
+                    end
+                  end
+                end
               end
            template = File.read(File.join(site['source'], '_includes', 'experts.html'))
            output << Liquid::Template.parse(template).render('expertsData' => expertsData)
             end        
-        end
+        #end
       end
     end
   end
