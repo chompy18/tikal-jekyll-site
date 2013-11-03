@@ -1,0 +1,78 @@
+<div class="view-content">
+  <div class="view-content-limit">
+    <div class="view-content-limit-content">
+
+      {% for postData in data %}
+      
+      {% if forloop.first %}
+        {% assign extra = "views-row-first" %}
+      {% elsif forloop.last %}
+        {% assign extra = "views-row-last" %}
+      {% else %}
+        {% assign extra = "" %}
+      {% endif %}
+
+     <div class="views-row views-row-{{ forloop.index }} views-row-{% cycle 'odd', 'even' %} {{ extra }}">
+      <div class="fields ">
+       <div class="views-field views-field-name">
+        <span class="field-content">
+          <a href="/{{postData['categoryLink']}}">
+            <div class="{{postData['category']}}"> {{postData['category']}} 
+            </div> 
+          </a>
+        </span>
+      </div>
+      <div class="views-field views-field-title">
+        <span class="field-content">
+          <a href="{{postData['postUrl']}}">{{postData['title']}}
+          </a>
+        </span>
+      </div>
+      <div class="views-field views-field-view-user">
+        <span class="views-label views-label-view-user">by
+        </span>
+        <span class="field-content">
+          <a href="{{postData['authorSite']}}">
+            <a href="{{postData['authorSite']}}" title="View user profile." class="username" xml:lang="" about="{{postData['authorSite']}}" typeof="sioc:UserAccount" property="foaf:name" datatype=""> {{postData['authorName']}}
+            </a>
+          </a>
+        </span>
+      </div>
+      <div class="views-field views-field-body">
+        <div class="field-content">
+          <p>{{postData['excerpt']}}
+          </p>
+
+        </div>
+      </div>
+      <div class="views-field views-field-created">
+        <span class="field-content">
+          <time pubdate datetime="{{postData['created']}}">
+            <div class="day">
+              {{postData['day']}}
+            </div>
+            {{postData['month']}}
+          </time>
+
+        </span>
+      </div>
+      <div class="views-field views-field-comment-count">
+        <span class="field-content">
+          <a class='comments' href='/node/12277#comments'>
+
+            <div url='/node/12277' class='count-comment'>0
+            </div>
+
+            <div class='label-comment'>comments
+            </div>
+
+          </a>
+        </span>
+      </div>
+    </div>
+
+  </div> 
+  {% endfor %}
+      </div>
+  </div>
+</div>

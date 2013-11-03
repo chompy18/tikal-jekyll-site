@@ -126,10 +126,7 @@ module Jekyll
       page = context.environments.first["page"]   
 
       if page
-        #experts = page['showExperts']
         expertsLimit = page['expertLimit']
-        #if experts
-          #experts = [experts] if experts.is_a?(String)
           expertsData = []
 
            "".tap do |output|
@@ -146,14 +143,88 @@ module Jekyll
                   end
                 end
               end
-           template = File.read(File.join(site['source'], '_includes', 'experts.html'))
-           output << Liquid::Template.parse(template).render('expertsData' => expertsData)
+              template = File.read(File.join(site['source'], '_includes', 'experts.html'))
+              output << Liquid::Template.parse(template).render('expertsData' => expertsData)
             end        
         #end
       end
+    end
+  end
+
+  class PostExcerptTag < Liquid::Tag
+
+    def initialize(tag_name, text, tokens)
+      super
+      @text   = text
+      @tokens = tokens
+    end
+
+    def getPostUrl(title, context)
+      site = context.environments.first["site"]
+      posts = site['posts']
+
+      posts.each do |post|
+        if post.title == title
+          return post.url
+        end
+      end
+
+    end
+
+    def render(context)
+      site = context.environments.first["site"]
+      # posts = site['posts'].first(3).reverse
+
+      authors = Hash.new
+      # Get authors model
+      Dir.foreach("_team") do |fname|
+        next if fname == "." or fname == ".."
+
+        data = YAML.load(File.read(File.join(site['source'], '_team', fname)))
+        authors[fname.chomp(File.extname(fname))] = data
+      
+      end
+
+      "".tap do |output|
+        # Get newest posts. Can't use site.posts because we need the md files.
+        files_sorted_by_time = Dir['_posts/*'].sort_by{ |f| File.mtime(f) }.last(3)
+
+        layoutData = []
+
+        files_sorted_by_time.each_with_index do |post, idx|
+          postRawData = YAML.load(File.read(File.join(site['source'], post)))
+
+          #get author from post and then apply template to data.
+          key = postRawData['author']
+          author = authors[key]
+
+          categoryLink = postRawData['category'].downcase
+          if categoryLink == ".net"
+            categoryLink = categoryLink.slice(1, categoryLink.size - 1)
+          end
+
+          postData = Hash.new
+          postData['authorName'] = author['name']
+          postData['authorSite'] = author['website']
+          postData['category'] = postRawData['category']
+          postData['categoryLink'] = categoryLink
+          postData['title'] = postRawData['title']
+          postData['excerpt'] = postRawData['excerpt']
+          postData['created'] = postRawData['created']
+          postData['postUrl'] = getPostUrl(postRawData['title'], context)
+          postData['day'] = Time.at(postRawData['created']).mday
+          postData['month'] = Time.at(postRawData['created']).strftime("%b.  %Y")
+          
+          layoutData.push(postData)
+
+        end
+       template = File.read(File.join(site['source'], '_includes', 'postShort.html'))
+       output << Liquid::Template.parse(template).render('data' => layoutData)        
+      end        
     end
   end
 end
 
 Liquid::Template.register_tag('authors', Jekyll::AuthorsTag)
 Liquid::Template.register_tag('experts', Jekyll::ExpertsTag)
+Liquid::Template.register_tag('postExcerpt', Jekyll::PostExcerptTag)

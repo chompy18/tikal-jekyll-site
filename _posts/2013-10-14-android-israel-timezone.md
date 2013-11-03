@@ -1,7 +1,11 @@
 ---
-layout: default
-title: Android – Israel Timezone
-created: 1381771364
+layout: post
+title:  Android – Israel Timezone
+created:   1381771364
+tags: Android timezone
+category: Incubator
+author: avi-tzurel
+excerpt: For all those Israelis that have an android but have the wrong time/time zone 
 ---
 <div class="MsoNormal">&nbsp;</div>
 

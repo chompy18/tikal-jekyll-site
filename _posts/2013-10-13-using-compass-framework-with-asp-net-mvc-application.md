@@ -1,7 +1,11 @@
 ---
-layout: default
+layout: post
 title: Using Compass framework with ASP.NET MVC application.
 created: 1381672610
+tags: compass asp .net mvc
+category: .NET
+author: menny-rachmanny
+excerpt: In my previous post I dexcribed how to start working with SASS
 ---
 <p>In my previous&nbsp;<a href="http://igorzelmanovich.blogspot.co.il/2013/10/add-power-of-sass-to-aspnet-application.html">post</a>&nbsp;I described how to&nbsp;<a href="http://igorzelmanovich.blogspot.co.il/2013/10/add-power-of-sass-to-aspnet-application.html">start working with SASS using Mindscape Web Workbench</a>.<br />
 <br />
