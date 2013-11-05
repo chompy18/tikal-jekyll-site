@@ -272,13 +272,20 @@ module Jekyll
 
     def render(context)
       site = context.environments.first["site"]
+      page = context.environments.first["page"]
+
+      if page['layout'] == 'careers'
+        folder = '_team'
+      else
+        folder = '_clients'
+      end
 
       clients = []
       # Get clients model
-      Dir.foreach("_clients") do |fname|
+      Dir.foreach(folder) do |fname|
         next if fname == "." or fname == ".."
 
-        data = YAML.load(File.read(File.join(site['source'], '_clients', fname)))
+        data = YAML.load(File.read(File.join(site['source'], folder, fname)))
         clients.push(data)
       
       end
@@ -287,6 +294,8 @@ module Jekyll
 
       "".tap do |output|
         (0..2).each do |i|
+          # this does not consider highlighted property.
+          # should modify to run until 3 highlighted are selected (or the list empties).
             idx = rand(clients.length)
             client = clients[idx]
             clients = clients - [client]

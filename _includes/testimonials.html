@@ -1,7 +1,7 @@
 <div class="view-content">
   <div class="view-content-limit">
     <div class="view-content-limit-content">
-          {% for client in data %}
+          {% for object in data %}
           
           {% if forloop.first %}
             {% assign extra = "views-row-first" %}
@@ -16,13 +16,25 @@
         <div class="views-field views-field-body">
           <div class="field-content">
             <div class="testimonies-user">
-              <img typeof="foaf:Image" src="{{ client.logoUrl }}" width="115" height="20" alt="" />
+              {% if object.role %}
+
+                <div class="user-picture">
+                  <img typeof="foaf:Image" src="/images/team/{{ object.image.url }}" alt="" />
+                </div>
+                <div class="name">{{ object.name }}</div>
+                <div class="description">{{ object.role }}</div>
+
+              {% else %}
+
+                <img typeof="foaf:Image" src="{{ object.logoUrl }}" width="115" height="20" alt="" />
+                
+              {% endif %}
             </div>
             <div class="testimonies-body">
               <div class="testimonies-arrow"></div>
               <div class="quote-open"></div>
               <div class="testimonies-text">
-                {{ client.testimonial }}
+                {{ object.testimonial }}
                 <div class="quote-close"></div>
               </div>
             </div>
