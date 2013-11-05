@@ -1,0 +1,4 @@
+---
+layout: solutions
+title: Solutions
+---
