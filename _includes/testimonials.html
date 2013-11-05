@@ -1,0 +1,35 @@
+<div class="view-content">
+  <div class="view-content-limit">
+    <div class="view-content-limit-content">
+          {% for client in data %}
+          
+          {% if forloop.first %}
+            {% assign extra = "views-row-first" %}
+          {% elsif forloop.last %}
+            {% assign extra = "views-row-last" %}
+          {% else %}
+            {% assign extra = "" %}
+          {% endif %}
+
+      <div class="views-row views-row-{{ forloop.index }} views-row-{% cycle 'odd', 'even' %} {{ extra }}">
+
+        <div class="views-field views-field-body">
+          <div class="field-content">
+            <div class="testimonies-user">
+              <img typeof="foaf:Image" src="{{ client.logoUrl }}" width="115" height="20" alt="" />
+            </div>
+            <div class="testimonies-body">
+              <div class="testimonies-arrow"></div>
+              <div class="quote-open"></div>
+              <div class="testimonies-text">
+                {{ client.testimonial }}
+                <div class="quote-close"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

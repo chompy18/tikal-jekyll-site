@@ -262,6 +262,44 @@ module Jekyll
     end
   end
 
+  class TestimonialsTag < Liquid::Tag
+
+    def initialize(tag_name, text, tokens)
+      super
+      @text   = text
+      @tokens = tokens
+    end
+
+    def render(context)
+      site = context.environments.first["site"]
+
+      clients = []
+      # Get clients model
+      Dir.foreach("_clients") do |fname|
+        next if fname == "." or fname == ".."
+
+        data = YAML.load(File.read(File.join(site['source'], '_clients', fname)))
+        clients.push(data)
+      
+      end
+
+      layoutData = []
+
+      "".tap do |output|
+        (0..2).each do |i|
+            idx = rand(clients.length)
+            client = clients[idx]
+            clients = clients - [client]
+            layoutData.push(client)
+        end
+
+        template = File.read(File.join(site['source'], '_includes', 'testimonials.html'))
+        output << Liquid::Template.parse(template).render('data' => layoutData)        
+      end
+
+    end
+  end
+
 
 end
 
@@ -271,3 +309,4 @@ Liquid::Template.register_tag('authors', Jekyll::AuthorsTag)
 Liquid::Template.register_tag('experts', Jekyll::ExpertsTag)
 Liquid::Template.register_tag('postExcerpt', Jekyll::PostExcerptTag)
 Liquid::Template.register_tag('clients', Jekyll::ClientsTag)
+Liquid::Template.register_tag('testimonials', Jekyll::TestimonialsTag)
