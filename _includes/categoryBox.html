@@ -1,12 +1,12 @@
-
-    
-  <div class="content">
-    <div class="menu-block-wrapper menu-block-3 menu-name-menu-domains parent-mlid-0 menu-level-1">
-  <ul class="menu clearfix">
-{% for category in site.cats  %}
-<li class="{{ category.styleClass  }}"><a href="/{{ category.name  }}" title="">{{ category.displayName  }}</a></li>
-{% endfor  %}
-
-</ul></div>
-  </div><!-- /.content -->
+<div class="content">
+	<div class="menu-block-wrapper menu-block-3 menu-name-menu-domains parent-mlid-0 menu-level-1">
+		<ul class="menu clearfix">
+			{% for category in site.cats  %}
+			<li class="{{ category.styleClass  }}">
+				<a href="/{{ category.name  }}" title="">{{ category.displayName  }}</a>
+			</li>
+			{% endfor  %}
+		</ul>
+	</div>
+</div><!-- /.content -->
 
