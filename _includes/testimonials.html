@@ -17,6 +17,7 @@
           <div class="field-content">
             <div class="testimonies-user">
               {% if object.role %}
+                <!-- if object has role - it's team member testimonial -->
 
                 <div class="user-picture">
                   <img typeof="foaf:Image" src="/images/team/{{ object.image.url }}" alt="" />
@@ -25,9 +26,9 @@
                 <div class="description">{{ object.role }}</div>
 
               {% else %}
-
+                <!-- else, it's client testimonial -->
                 <img typeof="foaf:Image" src="{{ object.logoUrl }}" width="115" height="20" alt="" />
-                
+
               {% endif %}
             </div>
             <div class="testimonies-body">
