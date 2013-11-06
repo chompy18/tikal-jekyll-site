@@ -1,239 +1,120 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN"
-   "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<!--[if lte IE 7 ]>
-<html lang="en" dir="ltr" version="HTML+RDFa 1.1"
-   xmlns:content="http://purl.org/rss/1.0/modules/content/"
-   xmlns:dc="http://purl.org/dc/terms/"
-   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-   xmlns:og="http://ogp.me/ns#"
-   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-   xmlns:sioc="http://rdfs.org/sioc/ns#"
-   xmlns:sioct="http://rdfs.org/sioc/types#"
-   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-   xmlns:xsd="http://www.w3.org/2001/XMLSchema#" class="no-js ie7 lte-ie9 lte-ie8">
-   <![endif]-->
-   <!--[if IE 8 ]>
-   <html lang="en" dir="ltr" version="HTML+RDFa 1.1"
-      xmlns:content="http://purl.org/rss/1.0/modules/content/"
-      xmlns:dc="http://purl.org/dc/terms/"
-      xmlns:foaf="http://xmlns.com/foaf/0.1/"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-      xmlns:sioc="http://rdfs.org/sioc/ns#"
-      xmlns:sioct="http://rdfs.org/sioc/types#"
-      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-      xmlns:xsd="http://www.w3.org/2001/XMLSchema#" class="no-js ie8 lte-ie9 lte-ie8">
-      <![endif]-->
-      <!--[if IE 9 ]>
-      <html lang="en" dir="ltr" version="HTML+RDFa 1.1"
-         xmlns:content="http://purl.org/rss/1.0/modules/content/"
-         xmlns:dc="http://purl.org/dc/terms/"
-         xmlns:foaf="http://xmlns.com/foaf/0.1/"
-         xmlns:og="http://ogp.me/ns#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:sioc="http://rdfs.org/sioc/ns#"
-         xmlns:sioct="http://rdfs.org/sioc/types#"
-         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema#" class="no-js ie9 lte-ie9">
-         <![endif]-->
-         <!--[if gt IE 9]>
-         <!-->
-         <html lang="en" dir="ltr" version="HTML+RDFa 1.1"
-            xmlns:content="http://purl.org/rss/1.0/modules/content/"
-            xmlns:dc="http://purl.org/dc/terms/"
-            xmlns:foaf="http://xmlns.com/foaf/0.1/"
-            xmlns:og="http://ogp.me/ns#"
-            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-            xmlns:sioc="http://rdfs.org/sioc/ns#"
-            xmlns:sioct="http://rdfs.org/sioc/types#"
-            xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema#" class="no-js">
-            <!--<![endif]-->
-<head profile="http://www.w3.org/1999/xhtml/vocab">
-            <meta charset="utf-8" />
-            <meta HTTP-EQUIV="Expires" CONTENT="-1" />
-            <meta HTTP-EQUIV="Pragma" CONTENT="no-cache" />
-            <meta HTTP-EQUIV="Cache" Content="no store" />
-            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-            <link rel="shortcut icon" href="http://tikalk.com/sites/all/themes/sasson/tikal/favicon.ico" type="image/vnd.microsoft.icon" />
-            <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache" />
-            <meta about="/java/create-java-cli-application-maven" property="sioc:num_replies" content="0" datatype="xsd:integer" />
-            <link rel="canonical" href="/java/create-java-cli-application-maven" />
-            <meta name="Generator" content="Drupal 7 (http://drupal.org)" />
-            <link rel="shortlink" href="/node/12269" />
-            <meta property="og:type" content="Article" />
-            <meta property="og:title" content="Create a Java CLI application with Maven"/>
-            <meta property="og:url" content="http://tikalk.com/java/create-java-cli-application-maven"/>
-            <meta property="og:image" content="http://tikalk.com/sites/all/themes/sasson/tikal/logo.png"/>
-            <meta property="fb:admins" content="100000379042702">
-            <meta content="{{ page.title }}" about="{{ page.title }}" property="dc:title" />
-            <meta property="og:image" content="http://tikalk.com/sites/all/themes/sasson/tikal/tikal-ico.jpg" />
-            <title>{{ page.title }} | Tikal</title>
-
-            <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>
-            <link type="text/css" rel="stylesheet" href="http://tikalk.com/sites/default/files/css/css_pbm0lsQQJ7A7WCCIMgxLho6mI_kBNgznNUWmTWcnfoE.css" media="all" />
-            <link type="text/css" rel="stylesheet" href="http://tikalk.com/sites/default/files/css/css_7P45jZGFQxhQmHfndoYns-_XN1bLVmGS69c8hsLtx8s.css" media="all" />
-            <link type="text/css" rel="stylesheet" href="http://tikalk.com/sites/default/files/css/css_pRm8U5y2aFxiSHHWwrZ_6vxeWUKYNJNTlB4CHU_AsnY.css" media="all" />
-            <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" media="all" />
-
-            <link type="text/css" rel="stylesheet" href="/css/cat-{{ page.category }}.css"/>
-
-            <script type="text/javascript" src="http://tikalk.com/sites/default/files/js/js_xAPl0qIk9eowy_iS9tNkCWXLUVoat94SQT48UBCFkyQ.js"></script>
-            <script type="text/javascript" src="http://tikalk.com/sites/default/files/js/js_ucOirI2XtUCy4uPf82BrgusGllBd_wA4FWlf6Cp5hJA.js"></script>
-            <script type="text/javascript" src="http://tikalk.com/sites/default/files/js/js_nCQKhabtBFC3f3KwRZ7Erw9W0fbKqfY-atbn6zW4n1w.js"></script>
-            <script type="text/javascript" src="http://tikalk.com/sites/default/files/js/js_65SgCtb7LXBiyMmSf5_Q3trrTwvSA58RSb0cigCdZYM.js"></script>
-            <script type="text/javascript">
-                  <!--//--><![CDATA[//><!--
-                     var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-1365497-6"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
-                     //--><!]]> </script>
-            <script type="text/javascript">
-                  <!--//--><![CDATA[//><!--
-                     jQuery(document).ready(function () {
-                              var labels = jQuery(".field-label");
-                              jQuery.each(labels, function() {
-                                 this.innerHTML = this.innerHTML.replace(":", "");
-                              });
-                              var labels = jQuery(".double-field-first");
-                              jQuery.each(labels, function() {
-                                 this.innerHTML = this.innerHTML.replace(":", "");
-                              });
-                           });
-                     //--><!]]> </script>
-            <script type="text/javascript" src="http://tikalk.com/sites/default/files/js/js_novAodeiiGn95u1GSUMWJEaqoui-G8aH6D2Ouvxt39M.js"></script>
-            <script type="text/javascript">
-                  <!--//--><![CDATA[//><!--
-                     jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"tikal","theme_token":"_FZ27MES_dN5cyQ9e9XLdd1CyO47xae7X1hRZDcpSh8","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/ui\/jquery.effects.core.min.js":1,"misc\/jquery.cookie.js":1,"misc\/jquery.form.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/back_to_top\/js\/back_to_top.js":1,"sites\/all\/modules\/contrib\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/all\/libraries\/colorbox\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/plain\/colorbox_style.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_inline.js":1,"sites\/all\/modules\/contrib\/views_slideshow\/js\/views_slideshow.js":1,"sites\/all\/modules\/contrib\/webform_conditional\/webform_conditional.js":1,"misc\/progress.js":1,"modules\/file\/file.js":1,"sites\/all\/modules\/contrib\/webform\/js\/webform.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"1":1,"sites\/all\/themes\/sasson\/scripts\/sasson.js":1,"sites\/all\/themes\/sasson\/tikal\/scripts\/jquery.scrollTo-1.4.3.1-min.js":1,"sites\/all\/themes\/sasson\/tikal\/scripts\/jquery.autoellipsis-1.0.10.min.js":1,"sites\/all\/themes\/sasson\/tikal\/scripts\/tikal.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/themes\/sasson\/styles\/reset\/normalize.css":1,"sites\/all\/modules\/contrib\/back_to_top\/css\/back_to_top.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/themes\/sasson\/styles\/sasson.scss":1,"sites\/all\/modules\/contrib\/ckeditor\/ckeditor.css":1,"sites\/all\/modules\/contrib\/colorbox\/styles\/plain\/colorbox_style.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/linkedin\/linkedin_auth\/linkedin_auth.css":1,"sites\/all\/modules\/contrib\/linkedin\/linkedin_profile\/linkedin_profile.css":1,"sites\/all\/modules\/contrib\/linkedin\/linkedin_status\/linkedin_status.css":1,"sites\/all\/modules\/contrib\/views_slideshow\/views_slideshow.css":1,"modules\/file\/file.css":1,"sites\/all\/modules\/contrib\/webform\/css\/webform.css":1,"sites\/all\/themes\/sasson\/tikal\/styles\/tikal.scss":1,"sites\/all\/themes\/sasson\/tikal\/styles\/tikal-css.css":1,"\/\/fonts.googleapis.com\/css?family=Open+Sans":1}},"back_to_top":{"back_to_top_button_trigger":"100","back_to_top_prevent_on_mobile":1,"back_to_top_prevent_in_admin":1,"back_to_top_button_type":"image"},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true},"webform_conditional":{"fields":false,"nid":"22","showSpeed":null},"file":{"elements":{"#edit-submitted-click-to-add-your-cv-upload":"txt,rtf,html,odf,pdf,doc,docx,ppt"}},"ajax":{"edit-submitted-click-to-add-your-cv-upload-button":{"wrapper":"edit-submitted-click-to-add-your-cv-ajax-wrapper","effect":"fade","progress":{"type":"throbber","message":null},"event":"mousedown","keypress":true,"prevent":"click","url":"\/file\/ajax\/submitted\/click_to_add_your_cv\/form-EqHUNJM0f33Hgv-KcoM_YYG7_j5jTSRIyLf4EjcvAfU","submit":{"_triggering_element_name":"submitted_click_to_add_your_cv_upload_button","_triggering_element_value":"Upload"}}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"}});
-                     //--><!]]> </script>
-            <!--[if lt IE 9]>
-            <script src="/sites/all/themes/sasson/scripts/html5shiv.js"></script>
-            <![endif]-->
-</head>
-<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-12269 node-type-article all-pages with-navigation with-subnav featured dir-ltr page-create-java-cli-application-maven section-java" >
-            <!--[if lte IE 7 ]>
-            <p class='chromeframe'>
-               Your browser is <em>ancient!</em>
-               <a href='http://browsehappy.com/'>Upgrade to a different browser</a>
-               or
-               <a href='http://www.google.com/chromeframe/?redirect=true'>install Google Chrome Frame</a>
-               to experience this site.
-            </p>
-            <![endif]-->
-            <div id="header-first">
-               <div class="region region-header-first">
-                  <div id="block-search-form" class="block block-search block-odd">
-                     <div class="content">
-                        <form action="/java/create-java-cli-application-maven" method="post" id="search-block-form" accept-charset="UTF-8">
-                           <div>
-                              <div class="container-inline">
-                                 <h2 class="element-invisible">Search form</h2>
-                                 <div class="form-item form-type-textfield form-item-search-block-form">
-                                    <label class="element-invisible" for="edit-search-block-form--2">Search</label>
-                                    <input title="Enter the terms you wish to search for." placeholder="Search" type="search" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
-                                 </div>
-                                 <div class="form-actions form-wrapper" id="edit-actions">
-                                    <input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" />
-                                 </div>
-                                 <input type="hidden" name="form_build_id" value="form-YiKBbFG2tvEZuLx9wCtzWMUNPH3CBE9fQxE_hTNKLTg" />
-                                 <input type="hidden" name="form_id" value="search_block_form" />
-                              </div>
-                           </div>
-                        </form>
+<div id="header-first">
+   <div class="region region-header-first">
+      <div id="block-search-form" class="block block-search block-odd">
+         <div class="content">
+            <form action="/java/create-java-cli-application-maven" method="post" id="search-block-form" accept-charset="UTF-8">
+               <div>
+                  <div class="container-inline">
+                     <h2 class="element-invisible">Search form</h2>
+                     <div class="form-item form-type-textfield form-item-search-block-form">
+                        <label class="element-invisible" for="edit-search-block-form--2">Search</label>
+                        <input title="Enter the terms you wish to search for." placeholder="Search" type="search" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
                      </div>
-                     <!-- /.content --> </div>
-                  <!-- /.block -->
-                  <div id="block-menu-menu-top-links" class="block block-menu block-even">
-                     <div class="content">
-                        <ul class="menu clearfix">
-                           <li class="first last leaf login">
-                              <a href="/user" title="">login</a>
-                           </li>
-                        </ul>
+                     <div class="form-actions form-wrapper" id="edit-actions">
+                        <input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" />
                      </div>
-                     <!-- /.content --> </div>
-                  <!-- /.block -->
-                  <div id="block-menu-menu-language" class="block block-menu block-odd">
-                     <div class="content">
-                        <ul class="menu clearfix">
-                           <li class="first last leaf עברית">
-                              <a href="/hebrew" title="">עברית</a>
-                           </li>
-                        </ul>
-                     </div>
-                     <!-- /.content --> </div>
-                  <!-- /.block -->
-                  <div id="block-views-edit-content-block" class="block block-views block-even">
-                     <div class="content">
-                        <div class="view view-edit-content view-id-edit_content view-display-id-block view-dom-id-5c9c7a8520fa75ebe336d1afb369cfae">
-                           <div class="view-content">
-                              <div class="view-content-limit">
-                                 <div class="view-content-limit-content">
-                                    <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
-                                       <div class="views-field views-field-edit-node">
-                                          <span class="field-content"></span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- /.content --> </div>
-                  <!-- /.block --> </div>
-            </div>
-            <!-- /#header_first -->
-            <header id="header" role="banner">
-               <div class="logo-and-region-header">
-                  <div class="background-logo"></div>
-                  <a href="/" title="Home" rel="home" id="logo">
-                     <img src="http://tikalk.com/sites/all/themes/sasson/tikal/logo.png" alt="Home" />
-                  </a>
-                  <div class="region region-header">
-                     <section id="block-menu-menu-header-menu" class="block block-menu block-odd">
-                        <h2 class="block-title element-invisible">Header menu</h2>
-                        <div class="content">
-                           <ul class="menu clearfix">
-                              <li class="first leaf about">
-                                 <a href="/about" title="">About</a>
-                              </li>
-                              <li class="leaf solutions">
-                                 <a href="/solutions" title="">Solutions</a>
-                              </li>
-                              <li class="leaf careers">
-                                 <a href="/careers" title="">Careers</a>
-                              </li>
-                              <li class="leaf events">
-                                 <a href="/events" title="">Events</a>
-                              </li>
-                              <li class="last leaf contact">
-                                 <a href="/contact" title="">Contact</a>
-                              </li>
-                           </ul>
-                        </div>
-                        <!-- /.content --> </section>
-                     <!-- /.block -->
-                     <section id="block-menu-menu-domains" class="block block-menu block-even">
-                        <h2 class="block-title element-invisible">Domains</h2>
-                        <div class="content">
-                           <ul class="menu clearfix">
-                              <li class="first leaf alm">
-                                 <a href="/alm" title="">ALM</a>
-                              </li>
-                              <li class="leaf java">
-                                 <a href="/java" title="">JAVA</a>
-                              </li>
-                              <li class="leaf js">
-                                 <a href="/js" title="">JS</a>
-                              </li>
-                              <li class="leaf .net">
-                                 <a href="/net" title="">.NET</a>
-                              </li>
-                              <li class="last leaf ror">
-                                 <a href="/ror" title="">RoR</a>
-                              </li>
-                           </ul>
-                        </div>
-                        <!-- /.content --> </section>
-                     <!-- /.block --> </div>
+                     <input type="hidden" name="form_build_id" value="form-YiKBbFG2tvEZuLx9wCtzWMUNPH3CBE9fQxE_hTNKLTg" />
+                     <input type="hidden" name="form_id" value="search_block_form" />
+                  </div>
                </div>
-               <!-- /#logo-and-region-header --> </header>
-            <!-- /#header -->
+            </form>
+         </div>
+         <!-- /.content --> </div>
+      <!-- /.block -->
+      <div id="block-menu-menu-top-links" class="block block-menu block-even">
+         <div class="content">
+            <ul class="menu clearfix">
+               <li class="first last leaf login">
+                  <a href="/user" title="">login</a>
+               </li>
+            </ul>
+         </div>
+         <!-- /.content --> </div>
+      <!-- /.block -->
+      <div id="block-menu-menu-language" class="block block-menu block-odd">
+         <div class="content">
+            <ul class="menu clearfix">
+               <li class="first last leaf עברית">
+                  <a href="/hebrew" title="">עברית</a>
+               </li>
+            </ul>
+         </div>
+         <!-- /.content --> </div>
+      <!-- /.block -->
+      <div id="block-views-edit-content-block" class="block block-views block-even">
+         <div class="content">
+            <div class="view view-edit-content view-id-edit_content view-display-id-block view-dom-id-5c9c7a8520fa75ebe336d1afb369cfae">
+               <div class="view-content">
+                  <div class="view-content-limit">
+                     <div class="view-content-limit-content">
+                        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+                           <div class="views-field views-field-edit-node">
+                              <span class="field-content"></span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- /.content --> </div>
+      <!-- /.block --> </div>
+</div>
+<!-- /#header_first -->
+<header id="header" role="banner">
+   <div class="logo-and-region-header">
+      <div class="background-logo"></div>
+      <a href="/" title="Home" rel="home" id="logo">
+         <img src="http://tikalk.com/sites/all/themes/sasson/tikal/logo.png" alt="Home" />
+      </a>
+      <div class="region region-header">
+         <section id="block-menu-menu-header-menu" class="block block-menu block-odd">
+            <h2 class="block-title element-invisible">Header menu</h2>
+            <div class="content">
+               <ul class="menu clearfix">
+                  <li class="first leaf about">
+                     <a href="/about" title="">About</a>
+                  </li>
+                  <li class="leaf solutions">
+                     <a href="/solutions" title="">Solutions</a>
+                  </li>
+                  <li class="leaf careers">
+                     <a href="/careers" title="">Careers</a>
+                  </li>
+                  <li class="leaf events">
+                     <a href="/events" title="">Events</a>
+                  </li>
+                  <li class="last leaf contact">
+                     <a href="/contact" title="">Contact</a>
+                  </li>
+               </ul>
+            </div>
+            <!-- /.content --> </section>
+         <!-- /.block -->
+         <section id="block-menu-menu-domains" class="block block-menu block-even">
+            <h2 class="block-title element-invisible">Domains</h2>
+            <div class="content">
+               <ul class="menu clearfix">
+                  <li class="first leaf alm">
+                     <a href="/alm" title="">ALM</a>
+                  </li>
+                  <li class="leaf java">
+                     <a href="/java" title="">JAVA</a>
+                  </li>
+                  <li class="leaf js">
+                     <a href="/js" title="">JS</a>
+                  </li>
+                  <li class="leaf .net">
+                     <a href="/net" title="">.NET</a>
+                  </li>
+                  <li class="last leaf ror">
+                     <a href="/ror" title="">RoR</a>
+                  </li>
+               </ul>
+            </div>
+            <!-- /.content --> </section>
+         <!-- /.block --> </div>
+   </div>
+   <!-- /#logo-and-region-header -->
+</header>
+<!-- /#header -->
